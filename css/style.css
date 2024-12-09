@@ -1,0 +1,554 @@
+:root {
+  --primary: #98bac7;
+  --bg: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #101010;
+  min-height: 5000px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(16, 16, 16, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 8px;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.6);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.hero {
+  min-height: 100vh; /* Tinggi minimum adalah tinggi viewport */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/index.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  position: relative; /* Elemen parent untuk positioning anak */
+  min-height: 100vh;
+  background: url("../img/index.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 50%);
+  z-index: 1; /* Overlay tetap di bawah konten */
+}
+
+.hero .content {
+  position: absolute;
+  top: 10rem; /* Posisi di atas */
+  left: 0; /* Posisi di kiri */
+  z-index: 2; /* Konten berada di atas overlay */
+  padding: 1rem; /* Memberikan jarak */
+}
+
+.hero .content h1 {
+  font-size: 5em; /* Sesuaikan ukuran teks */
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary)
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 200;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/*paket perjalanan section start*/
+.paket-perjalanan, .pendaftaran, .ulasan {
+  padding: 5rem 7% 1.8rem; /* Memberikan ruang atas untuk konten */
+  text-align: center;
+  scroll-margin-top: 1rem; /* Menghindari konten tertutup oleh navbar */
+  margin: 0;
+  z-index: 10;
+  height: 800px;
+}
+
+.paket-perjalanan h2, .pendaftaran h2, .ulasan h2{
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.paket-perjalanan h2 span, .pendaftaran h2 span, .ulasan h2 span{
+  color: var(--primary);
+}
+
+.paket-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.paket-item {
+  flex: 1;
+  background-color: var(--bg-dark);
+  color: var(--primary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.paket-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.paket-item h3 {
+  font-size: 1.8rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--primary);
+}
+
+.paket-item p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+}
+
+.paket-item .btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  color: #fff;
+  font-size: 1.5rem;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.paket-item .btn:hover {
+  background-color: #79a1b5;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal-content h4 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Tombol Tutup (X) */
+.modal-content #x {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content #x:hover {
+  color: #333;
+}
+
+.modal-content p {
+  white-space: pre-line; 
+  font-family: "Arial", sans-serif; 
+  font-size: 1rem; 
+  line-height: 1.6; 
+  color: #333; 
+  margin: 0; 
+  text-align: left; 
+  padding: 1rem; 
+}
+
+.modal-content h4 {
+  font-size: 1.8rem; 
+  font-weight: bold; 
+  color: #222; 
+  margin-bottom: 1rem; 
+}
+
+.modal-content ul {
+  list-style: disc; 
+  margin: 1rem 0; 
+  padding-left: 2rem; 
+}
+
+.modal-content ul li {
+  margin-bottom: 0.5rem; 
+}
+
+.modal-content span.total-harga {
+  display: block; 
+  font-weight: bold; 
+  color: #000; 
+  margin-top: 1rem; 
+  font-size: 1.2rem; 
+}
+
+/* Informasi Destinasi */
+.informasi-destinasi {
+  padding: 10rem 10% 2rem;
+  text-align: center;
+  background-color: #fff;
+  
+  height: 1100px;
+}
+
+.informasi-destinasi h2 {
+  font-size: 2.5rem;
+  color: var(--bg);
+  margin-bottom: 30px;
+}
+
+.informasi-destinasi h2 span {
+  color: var(--primary);
+}
+
+.destinasi-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.destinasi-item {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+}
+
+.destinasi-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destinasi-item h3 {
+  margin: 15px;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.destinasi-item p {
+  margin: 15px;
+  font-size: 1rem;
+  color: #000000;
+}
+
+/*pendaftaran*/
+.pendaftaran p{
+  text-align: center;
+  max-width: 100rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+.pendaftaran h2{
+  margin-bottom: 1rem;
+}
+
+.pendaftaran .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+  color: #fff;
+}
+
+.pendaftaran .row .map{
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.pendaftaran .row form{
+  flex: 1 1 45rem;
+  padding: 5rem  2rem;
+  text-align: center;
+}
+
+
+.pendaftaran .row form .input-group{
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+/* Tentang Kami */
+.tentang-kami {
+  padding: 5rem 10%;
+  text-align: center;
+  background-color: #000000;
+  height: 800px;
+}
+
+.tentang-kami h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.tentang-kami h2 span {
+  color: #fff;
+}
+
+.tentang-kami p {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 200rem;
+}
+
+.info-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.about-info {
+  text-align: left;
+  flex: 1 1 60%;
+}
+
+.about-info h3 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.about-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-info li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #fff;
+  max-width: 300;
+}
+
+.about-info i {
+  color: var(--primary);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Ulasan */
+.reviews {
+  margin-top: 40px;
+}
+
+.review-item {
+  margin-bottom: 30px;
+}
+
+.review-item p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.rating i {
+  margin-right: 5px;
+  color: #fff;
+}
+
+
+/*media queries*/
+/*Laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 65%;
+  }
+}
+
+/*Tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  #hamburger-menu {
+    display: inline-block;
+  }
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 35rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+}
+
+/*mobile phone*/
+@media (max-width: 450px) {
+  html {
+    font-size: 35%;
+  }
+}

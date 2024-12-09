@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Berkah</title>
+
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--feather Icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!--My Style-->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--Navbar start-->
+    <nav class="navbar">
+      <a href="#" class="navbar-logo">Travel <span>Berkah</span></a>
+
+      <div class="navbar-nav">
+        <a href="#home">Home</a>
+        <a href="#paket-perjalanan">Paket</a>
+        <a href="#infromasi-destinasi">Informasi</a>
+        <a href="#pendaftaran">Pendaftaran</a>
+        <a href="#tentang-kami">Tentang Kami</a>
+        <a href="#ulasan">Ulasan</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search"><i data-feather="search"></i></a>
+        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
+        <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!--Navbar end-->
+
+    <!--Section start-->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Selamat Datang <br><span>di Travel Berkah</span></h1>
+        <p>
+          Kami adalah penyedia layanan terpercaya untuk perjalanan umroh dan<br>
+          haji Anda. Dengan pengalaman bertahun-tahun, kami berkomitmen untuk<br>
+          memberikan pengalaman ibadah terbaik.
+        </p>
+        <a href="#paket-perjalanan" class="cta">Buka Paket</a>
+      </main>
+    </section>
+    <!--Section end-->
+
+    <!--paket perjalanan section start-->
+    <section id="paket-perjalanan" class="paket-perjalanan">
+      <h2><span>Paket</span> Perjalanan</h2>
+      <div id="paket-list" class="paket-list">
+          <div class="paket-item">
+              <img src="img/umroh.jpg" alt="Umroh Reguler">
+              <h3>Umroh Reguler</h3>
+              <p>Paket umroh dengan harga terjangkau dan fasilitas terbaik.</p>
+              <button class="btn" data-paket="umroh">Lihat Detail</button>
+          </div>
+          <div class="paket-item">
+              <img src="img/haji.jpg" alt="Haji Plus">
+              <h3>Haji Plus</h3>
+              <p>Paket haji khusus dengan fasilitas premium dan layanan eksklusif.</p>
+              <button class="btn" data-paket="haji">Lihat Detail</button>
+          </div>
+      </div>
+  </section>
+
+<!-- Modal Section -->
+<div id="detail-modal" class="modal hidden">
+  <div class="modal-content">
+    <a href="#" id="x"><i data-feather="x"></i></a>
+      <!-- Konten Modal -->
+      <h4 id="modal-title"></h4>
+      <p id="modal-description"></p>
+  </div>
+</div>
+
+  
+    <!--paket perjalanan section end-->
+  
+    <!-- Informasi Destinasi Section -->
+<section id="infromasi-destinasi" class="informasi-destinasi">
+  <h2><span>Informasi</span> Destinasi</h2>
+  <div class="destinasi-list">
+    <div class="destinasi-item">
+      <img src="img/mekkah.jpg" alt="Mekkah">
+      <h3>Mekkah</h3>
+      <p>
+        Kota suci umat Islam yang menjadi pusat ibadah haji dan umroh, 
+        dengan Masjidil Haram dan Ka'bah sebagai tujuan utama.
+      </p>
+    </div>
+    <div class="destinasi-item">
+      <img src="img/madinah.jpg" alt="Madinah">
+      <h3>Madinah</h3>
+      <p>
+        Kota Nabi dengan Masjid Nabawi sebagai salah satu masjid terpenting, 
+        tempat makam Nabi Muhammad SAW berada.
+      </p>
+    </div>
+    <div class="destinasi-item">
+      <img src="img/jeddah.jpg" alt="Jeddah">
+      <h3>Jeddah</h3>
+      <p>
+        Gerbang masuk ke Tanah Suci dengan destinasi wisata modern, 
+        termasuk Laut Merah dan kawasan bersejarah.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!--pendaftaran-->
+<section id="pendaftaran" class="pendaftaran">
+  <h2><span>Pendaftaran</span> Online</h2>
+  <p> Kami siap membantu Anda untuk memulai perjalanan spiritual Anda. Hubungi kami untuk informasi lebih lanjut, 
+    konsultasi atau pendaftaran melalui kontak berikut:</p>  
+     <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126904.29865086738!2d106.62590963755308!3d-6.295325954026399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fab10419c095%3A0x8706481c2c4aafe4!2sTangerang%20Selatan%2C%20Kota%20Tangerang%20Selatan%2C%20Banten!5e0!3m2!1sid!2sid!4v1733661951438!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+      <form action="">
+        <div class="input-group">
+          <i data-feather="user"></i>
+          <a href="Travel Berkah" target="_blank">Tarvel Berkah</a>
+        </div>
+        <div class="input-group">
+          <i data-feather="mail"></i>
+          <a href="mailto:info@travelberkah.com">info@travelberkah.com</a>
+        </div>
+        <div class="input-group">
+          <i data-feather="phone"></i>
+          <a href="https://wa.me/6281122334455" target="_blank">+62 811-2233-4455</a>
+        </div>
+      </form>
+    </div>
+</section>
+
+<!-- Tentang Kami Section -->
+<section id="tentang-kami" class="tentang-kami">
+  <div class="container">
+    <h2><span>Tentang</span> Kami</h2>
+    <p>
+      Travel Berkah adalah mitra perjalanan spiritual terpercaya yang berkomitmen untuk menyediakan layanan terbaik dalam perjalanan umroh dan haji Anda. 
+      Kami berdedikasi untuk memberikan pengalaman ibadah yang khusyuk, aman, dan nyaman dengan fasilitas terbaik.
+    </p>
+    <div class="info-section">
+      <div class="about-info">
+        <h3>Kenapa Memilih Kami?</h3>
+        <ul>
+          <li><i data-feather="check-circle"></i> Berpengalaman dalam perjalanan umroh dan haji</li>
+          <li><i data-feather="check-circle"></i> Tim profesional dan ramah</li>
+          <li><i data-feather="check-circle"></i> Harga transparan dan kompetitif</li>
+          <li><i data-feather="check-circle"></i> Fasilitas lengkap dan nyaman</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Ulasan Section -->
+<section id="ulasan" class="ulasan">
+  <div class="container">
+    <h2><span>Ulasan</span> Pelanggan</h2>
+    <div class="reviews">
+      <div class="review-item">
+        <p>
+          "Pelayanan yang sangat baik, fasilitas memuaskan, dan perjalanan spiritual yang tak terlupakan. Terima kasih Travel Berkah!"
+        </p>
+        <div class="rating">
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+        </div>
+        <h4>- Hidayat, Jakarta</h4>
+      </div>
+      <div class="review-item">
+        <p>
+          "Proses pendaftaran mudah, tim sangat membantu dari awal hingga akhir. Sangat direkomendasikan!"
+        </p>
+        <div class="rating">
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+          <i data-feather="star"></i>
+        </div>
+        <h4>- Aisyah, Bandung</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!--Feather Icon-->
+    <script>
+      feather.replace();
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/lihat detail.js"></script>
+    
+  </body>
+</html>
